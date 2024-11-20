@@ -1,0 +1,40 @@
+{
+  "name": "use-react-structures",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "install-dep": "npm install myy-common --save",
+    "install-dep-dev": "npm install --save-dev @types/node",
+    "build": "tsc",
+    "link": "npm link",    
+    "login": "npm login",
+    "preversion": "npm run build",
+    "version": "npm publish"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.9.1",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.6.3"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  },
+  "dependencies": {
+    "myy-common": "^0.1.2"
+  }
+}
